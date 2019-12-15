@@ -19,10 +19,7 @@ fn find_median_sorted_arrays(nums1: Vec<i32>, nums2: Vec<i32>) -> f64 {
     if nums2.is_empty() {
         return find_median_single(&nums1, 1, nums1.len());
     }
-    let mut head1 = 1;
-    let mut head2 = 1;
-    let mut tail1 = nums1.len();
-    let mut tail2 = nums2.len();
+    let (mut head1, mut head2, mut tail1, mut tail2) = (1, 1, nums1.len(), nums2.len());
     while (tail1 - head1) + (tail2 - head2) > 0 {
         if nums1[head1-1] < nums2[head2-1] {
             head1+=1;
