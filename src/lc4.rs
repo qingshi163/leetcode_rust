@@ -17,6 +17,6 @@ mod tests {
     use super::*;
 
     #[test]
-    fn test_solution4() {
+    fn test_lc4() {
     }
 }

@@ -27,11 +27,11 @@ fn expand_from(bytes: &[u8], l: usize, r: usize) -> usize {
     let mut r = r;
     let len = bytes.len();
     while r < len && bytes[l]==bytes[r] {
-        if l == 0 { return r-l+3; }
+        if l == 0 { r+=2; break; }
         l-=1;
         r+=1;
     }
-    r-l+1
+    if r-l < 2 {0} else {r-l-1}
 }
 
 #[cfg(test)]
@@ -41,5 +41,12 @@ mod tests {
     #[test]
     fn test_lc5() {
         assert_eq!(longest_palindrome(String::from("abcdedcba")), String::from("abcdedcba"));
+        assert_eq!(longest_palindrome(String::from("aabcba")), String::from("abcba"));
+        assert_eq!(longest_palindrome(String::from("")), String::from(""));
+        assert_eq!(longest_palindrome(String::from("adeedaccc")), String::from("adeeda"));
+        assert_eq!(longest_palindrome(String::from("a")), String::from("a"));
+        assert_eq!(longest_palindrome(String::from("aaabb")), String::from("aaa"));
+        assert_eq!(longest_palindrome(String::from("aabbb")), String::from("bbb"));
+        assert_eq!(longest_palindrome(String::from("abacdfgdcaba")), String::from("aba"));
     }
 }
