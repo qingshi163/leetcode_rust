@@ -7,7 +7,11 @@ fn reverse(x: i32) -> i32 {
         result += x as i64 % 10;
         x /= 10;
     }
-    if result > std::i32::MAX.into() {0} else {result as i32}
+    if result > std::i32::MAX.into() || result < std::i32::MIN.into() {
+        0
+    } else {
+        result as i32
+    }
 }
 
 #[cfg(test)]
@@ -18,7 +22,6 @@ mod tests {
     fn test_7() {
         assert_eq!(reverse(123), 321);
         assert_eq!(reverse(-123), -321);
-        assert_eq!(reverse(std::i32::MAX), 0);
-        assert_eq!(reverse(std::i32::MIN), 0);
+        assert_eq!(reverse(-2147483648), 0);
     }
 }
