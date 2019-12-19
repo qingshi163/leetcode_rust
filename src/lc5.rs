@@ -38,7 +38,7 @@ mod tests {
     use super::*;
 
     #[test]
-    fn test_lc5() {
+    fn test_5() {
         assert_eq!(longest_palindrome(String::from("abcdedcba")), "abcdedcba");
         assert_eq!(longest_palindrome(String::from("aabcba")), "abcba");
         assert_eq!(longest_palindrome(String::from("")), "");

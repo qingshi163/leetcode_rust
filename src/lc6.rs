@@ -15,7 +15,7 @@ mod tests {
     use super::*;
 
     #[test]
-    fn test_lc6() {
+    fn test_6() {
         assert_eq!(convert("PAYPALISHIRING".to_owned(), 4), "PINALSIGYAHRPI");
         assert_eq!(convert("PAYPALISHIRING".to_owned(), 3), "PAHNAPLSIIGYIR");
     }
