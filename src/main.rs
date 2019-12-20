@@ -9,6 +9,9 @@ mod lc9;
 mod lc10;
 mod lc11;
 mod lc12;
+mod lc13;
+mod lc14;
+mod lc31;
 mod lc39;
 mod lc40;
 
