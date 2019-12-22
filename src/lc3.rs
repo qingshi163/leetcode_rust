@@ -23,7 +23,7 @@ mod tests {
     use super::*;
 
     #[test]
-    fn test_solution3() {
+    fn test_3() {
         assert_eq!(lengthOfLongestSubstring(String::from("123456789123")), 9);
         assert_eq!(lengthOfLongestSubstring(String::from("")), 0);
         assert_eq!(lengthOfLongestSubstring(String::from("123123")), 3);

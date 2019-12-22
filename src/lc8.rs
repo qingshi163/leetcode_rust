@@ -33,7 +33,7 @@ mod tests {
     use super::*;
 
     #[test]
-    fn test_lc8() {
+    fn test_8() {
         assert_eq!(my_atoi("123".to_owned()), 123);
         assert_eq!(my_atoi("0321".to_owned()), 321);
         assert_eq!(my_atoi("  321".to_owned()), 321);
