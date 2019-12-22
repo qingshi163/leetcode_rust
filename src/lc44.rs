@@ -1,23 +1,4 @@
 
-fn __is_match(s: &[char], p: &[char]) -> bool {
-    let mut i = 0;
-    while i < std::cmp::min(s.len(), p.len()) {
-        if s[i] != p[i] && p[i] != '?' {
-            break;
-        }
-        i += 1;
-    }
-    if i == p.len() {
-        return i == s.len();
-    }
-    if p[i] != '*' {
-        return false;
-    }
-    let mut p_idx = i;
-    while p_idx+1 != p.len() && p[p_idx+1] == '*' { p_idx += 1; }
-    (i != s.len() && _is_match(&s[i+1..], &p[p_idx..])) ||
-    _is_match(&s[i..], &p[p_idx+1..])
-}
 
 fn _is_match(s: &[char], p: &[char]) -> bool {
     let (mut s_idx, mut p_idx, mut matched, mut has_star, mut star_idx) = (0, 0, 0, false, 0);
