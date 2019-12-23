@@ -14,6 +14,7 @@ mod lc14;
 mod lc15;
 mod lc16;
 mod lc17;
+mod lc18;
 mod lc31;
 mod lc34;
 mod lc39;
