@@ -1,13 +1,12 @@
 
 #[allow(dead_code)]
 fn plus_one(mut digits: Vec<i32>) -> Vec<i32> {
-    let carry = digits.iter_mut().rev().try_for_each(|x| {
+    if digits.iter_mut().rev().try_for_each(|x| {
         *x+=1; *x %= 10;
         if *x!=0 { Err(()) } else { Ok(()) }
-    });
-    if carry.is_ok() {
+    }).is_ok() {
         digits.insert(0, 1);
-    }
+    };
     digits
 }
 
