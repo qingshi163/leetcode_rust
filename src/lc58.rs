@@ -1,7 +1,7 @@
 
 #[allow(dead_code)]
 fn length_of_last_word(s: String) -> i32 {
-    s.as_bytes().iter().rev().skip_while(|&&x| x==b' ').take_while(|&&x| x!=b' ').count() as i32
+    s.bytes().rev().skip_while(|&x| x==b' ').take_while(|&x| x!=b' ').count() as i32
 }
 
 #[cfg(test)]
