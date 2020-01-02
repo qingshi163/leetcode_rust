@@ -27,6 +27,10 @@ mod lc44;
 mod lc45;
 mod lc48;
 mod lc49;
+mod lc53;
+mod lc121;
+mod lc122;
+mod lc123;
 
 fn main() {
     println!("Use cargo test to run the code");
