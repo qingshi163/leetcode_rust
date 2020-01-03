@@ -1,4 +1,4 @@
-use super::utils::{ ListNode, to_linked_list };
+use super::utils::ListNode;
 
 #[allow(dead_code)]
 fn is_palindrome(head: Option<Box<ListNode>>) -> bool {
@@ -29,6 +29,7 @@ fn is_palindrome(head: Option<Box<ListNode>>) -> bool {
 #[cfg(test)]
 mod tests {
     use super::*;
+    use super::super::utils::to_linked_list;
 
     #[test]
     fn test_234() {
