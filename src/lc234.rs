@@ -29,12 +29,12 @@ fn is_palindrome(head: Option<Box<ListNode>>) -> bool {
 #[cfg(test)]
 mod tests {
     use super::*;
-    use super::super::utils::to_linked_list;
+    use super::super::utils::to_list;
 
     #[test]
     fn test_234() {
-        assert!(is_palindrome(to_linked_list(&[1,2,3,3,2,1])));
-        assert!(is_palindrome(to_linked_list(&[1,2,3,2,1])));
-        assert!(!is_palindrome(to_linked_list(&[1,2,3,2])));
+        assert!(is_palindrome(to_list(&[1,2,3,3,2,1])));
+        assert!(is_palindrome(to_list(&[1,2,3,2,1])));
+        assert!(!is_palindrome(to_list(&[1,2,3,2])));
     }
 }
