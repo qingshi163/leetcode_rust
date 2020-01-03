@@ -27,7 +27,7 @@ pub struct ListNode {
 impl ListNode {
   #[inline]
   #[allow(dead_code)]
-  fn new(val: i32) -> Self {
+  pub fn new(val: i32) -> Self {
     ListNode {
       next: None,
       val
@@ -36,7 +36,7 @@ impl ListNode {
 }
 
 #[allow(dead_code)]
-pub fn to_linked_list(v: &[i32]) -> Option<Box<ListNode>> {
+pub fn to_list(v: &[i32]) -> Option<Box<ListNode>> {
     let mut curr = None;
     for &val in v.iter().rev() {
         let mut node = ListNode::new(val);
