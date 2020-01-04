@@ -1,6 +1,7 @@
 #[macro_use]
 mod utils;
 mod lc1;
+mod lc2;
 mod lc3;
 mod lc4;
 mod lc5;
@@ -37,6 +38,7 @@ mod lc122;
 mod lc123;
 mod lc125;
 mod lc234;
+mod lc977;
 
 fn main() {
     println!("Use cargo test to run the code");
