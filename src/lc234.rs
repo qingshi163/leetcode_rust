@@ -1,20 +1,5 @@
-// Definition for singly-linked list.
-#[derive(PartialEq, Eq, Clone, Debug)]
-pub struct ListNode {
-  pub val: i32,
-  pub next: Option<Box<ListNode>>
-}
+use super::utils::ListNode;
 
-impl ListNode {
-  #[inline]
-  #[allow(dead_code)]
-  fn new(val: i32) -> Self {
-    ListNode {
-      next: None,
-      val
-    }
-  }
-}
 #[allow(dead_code)]
 fn is_palindrome(head: Option<Box<ListNode>>) -> bool {
     if head == None {
@@ -43,8 +28,13 @@ fn is_palindrome(head: Option<Box<ListNode>>) -> bool {
 
 #[cfg(test)]
 mod tests {
+    use super::*;
+    use super::super::utils::to_list;
 
     #[test]
     fn test_234() {
+        assert!(is_palindrome(to_list(&[1,2,3,3,2,1])));
+        assert!(is_palindrome(to_list(&[1,2,3,2,1])));
+        assert!(!is_palindrome(to_list(&[1,2,3,2])));
     }
 }

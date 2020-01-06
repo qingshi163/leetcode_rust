@@ -108,6 +108,7 @@ fn all() -> impl Iterator<Item = (usize, usize)> {
     (0..9).flat_map(move |i| (0..9).map(move |j| (i, j)))
 }
 
+#[allow(dead_code)]
 pub fn solve_sudoku(board: &mut Vec<Vec<char>>) {
     let ss = Snapshot::new(&board);
     match ss.solve() {
