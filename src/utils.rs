@@ -67,3 +67,51 @@ impl TreeNode {
         }
     }
 }
+
+#[allow(dead_code)]
+pub fn to_tree(v: &[Option<i32>]) -> Option<Rc<RefCell<TreeNode>>> {
+    if v.is_empty() { return None; }
+    let head = Some(Rc::new(RefCell::new(TreeNode::new(v[0].unwrap()))));
+    let mut workflow = vec![Rc::clone(head.as_ref().unwrap())];
+    let mut newnodes = Vec::new();
+    let mut v_idx = 1;
+    loop {
+        for node in &workflow {
+            if v_idx == v.len() { return head; }
+            if let Some(val) = v[v_idx] {
+                let tmp = Rc::new(RefCell::new(TreeNode::new(val)));
+                newnodes.push(Rc::clone(&tmp));
+                node.borrow_mut().left = Some(tmp);
+            }
+            v_idx += 1;
+            if v_idx == v.len() { return head; }
+            if let Some(val) = v[v_idx] {
+                let tmp = Rc::new(RefCell::new(TreeNode::new(val)));
+                newnodes.push(Rc::clone(&tmp));
+                node.borrow_mut().right = Some(tmp);
+            }
+            v_idx += 1;
+        }
+        if newnodes.is_empty() {
+            return head;
+        } else {
+            std::mem::swap(&mut workflow, &mut newnodes);
+        }
+    }
+}
+
+
+#[macro_export]
+macro_rules! tree {
+    () => {
+        None
+    };
+    ($($e:expr),*) => {
+        {
+            let vec = vec![$(stringify!($e)), *];
+            let vec = vec.into_iter().map(|v| v.parse::<i32>().ok()).collect::<Vec<_>>();
+            to_tree(&vec)
+        }
+    };
+    ($($e:expr,)*) => {(tree![$($e),*])};
+}
