@@ -68,6 +68,24 @@ impl TreeNode {
     }
 }
 
+use std::fmt;
+impl fmt::Display for TreeNode {
+    fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
+        write!(f, "{}", self.val)
+        .and(write!(f, " (l: "))
+        .and(match &self.left {
+            None => write!(f, "None"),
+            Some(node) => write!(f, "{}", node.borrow())
+        })
+        .and(write!(f, " r: "))
+        .and(match &self.right {
+            None => write!(f, "None"),
+            Some(node) => write!(f, "{}", node.borrow())
+        })
+        .and(write!(f, ")"))
+    }
+}
+
 #[allow(dead_code)]
 pub fn to_tree(v: &[Option<i32>]) -> Option<Rc<RefCell<TreeNode>>> {
     if v.is_empty() { return None; }
@@ -96,6 +114,7 @@ pub fn to_tree(v: &[Option<i32>]) -> Option<Rc<RefCell<TreeNode>>> {
             return head;
         } else {
             std::mem::swap(&mut workflow, &mut newnodes);
+            newnodes.clear();
         }
     }
 }
