@@ -3,7 +3,6 @@
 use std::rc::Rc;
 use std::cell::RefCell;
 use super::utils::TreeNode;
-use super::utils::to_tree;
 #[allow(dead_code)]
 fn is_same_tree(p: Option<Rc<RefCell<TreeNode>>>, q: Option<Rc<RefCell<TreeNode>>>) -> bool {
     p == q
@@ -12,6 +11,7 @@ fn is_same_tree(p: Option<Rc<RefCell<TreeNode>>>, q: Option<Rc<RefCell<TreeNode>
 #[cfg(test)]
 mod tests {
     use super::*;
+    use crate::utils::to_tree;
 
     #[test]
     fn test_100() {
