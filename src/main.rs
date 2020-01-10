@@ -38,6 +38,7 @@ mod lc66;
 mod lc67;
 mod lc88;
 mod lc100;
+mod lc110;
 mod lc121;
 mod lc122;
 mod lc123;
