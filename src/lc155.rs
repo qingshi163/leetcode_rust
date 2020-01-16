@@ -18,7 +18,7 @@ impl MinStack {
             v: Vec::new()
         }
     }
-    
+
     fn push(&mut self, x: i32) {
         self.v.push(x);
     }
