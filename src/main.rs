@@ -49,6 +49,7 @@ mod lc171;
 mod lc189;
 mod lc202;
 mod lc234;
+mod lc258;
 mod lc977;
 
 fn main() {
