@@ -43,6 +43,8 @@ mod lc121;
 mod lc122;
 mod lc123;
 mod lc125;
+mod lc151;
+mod lc152;
 mod lc155;
 mod lc168;
 mod lc171;
