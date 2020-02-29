@@ -5,13 +5,10 @@ fn lengthOfLongestSubstring(s: String) -> i32 {
     let mut sub: Vec<u8> = Vec::new();
     let mut count: i32 = 0;
     for &b in s.as_bytes() {
-        match sub.iter().position(|&a| a==b) {
-            Some(index) => {
-                count = std::cmp::max(count, sub.len() as i32);
-                let (_,_sub) = sub.split_at_mut(index+1);
-                sub = _sub.to_vec();
-            },
-            None => {}
+        if let Some(index) = sub.iter().position(|&a| a==b) {
+            count = std::cmp::max(count, sub.len() as i32);
+            let (_,_sub) = sub.split_at_mut(index+1);
+            sub = _sub.to_vec();
         }
         sub.push(b);
     }

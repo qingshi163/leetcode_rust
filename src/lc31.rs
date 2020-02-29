@@ -6,7 +6,7 @@ fn next_permutation(nums: &mut Vec<i32>) {
         return;
     }
     let mut i = nums.len() - 1;
-    while i > 0 && nums[i-1] > nums[i] {
+    while i > 0 && nums[i-1] >= nums[i] {
         i -= 1;
     }
     if i != 0 {
