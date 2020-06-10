@@ -21,6 +21,7 @@ mod lc18;
 mod lc19;
 mod lc20;
 mod lc21;
+mod lc22;
 mod lc31;
 mod lc34;
 mod lc37;
@@ -57,6 +58,7 @@ mod lc219;
 mod lc234;
 mod lc258;
 mod lc977;
+mod invert_binary_tree;
 
 fn main() {
     println!("Use cargo test to run the code");
