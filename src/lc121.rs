@@ -2,9 +2,9 @@
 fn max_profit(prices: Vec<i32>) -> i32 {
     let mut max = i32::min_value();
     let mut buy = i32::max_value();
-    for i in 0..prices.len() {
-        buy = std::cmp::min(buy, prices[i]);
-        max = std::cmp::max(max, prices[i] - buy);
+    for price in prices {
+        buy = std::cmp::min(buy, price);
+        max = std::cmp::max(max, price - buy);
     }
     if max > 0 {max} else {0}
 }

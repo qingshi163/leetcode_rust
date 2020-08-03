@@ -2,11 +2,11 @@
 fn max_sub_array(nums: Vec<i32>) -> i32 {
     let mut max = i32::min_value();
     let mut adding = 0;
-    for i in 0..nums.len() {
+    for n in nums {
         adding = if adding <= 0 {
-            nums[i]
+            n
         } else {
-            nums[i] + adding
+            n + adding
         };
         if adding > max {
             max = adding;

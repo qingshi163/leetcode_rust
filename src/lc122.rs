@@ -5,11 +5,11 @@ fn max_profit(prices: Vec<i32>) -> i32 {
     }
     let mut cur = prices[0];
     let mut profit = 0;
-    for i in 1..prices.len() {
-        if prices[i] > cur {
-            profit += prices[i] - cur;
+    for price in prices {
+        if price > cur {
+            profit += price - cur;
         }
-        cur = prices[i];
+        cur = price;
     }
     profit
 }

@@ -6,7 +6,7 @@ fn group_anagrams(strs: Vec<String>) -> Vec<Vec<String>> {
     for s in &strs {
         let mut key = s.bytes().collect::<Vec<u8>>();
         key.sort_unstable();
-        map.entry(key).and_modify(|val| val.push(s.clone())).or_insert(vec![s.clone()]);
+        map.entry(key).and_modify(|val| val.push(s.clone())).or_insert_with(|| vec![s.clone()]);
     }
     map.values().cloned().collect()
 }

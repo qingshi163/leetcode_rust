@@ -16,7 +16,7 @@ struct Snapshot {
     pub board: [[Cell; 9]; 9],
 }
 impl Snapshot {
-    pub fn new(origin: &Vec<Vec<char>>) -> Snapshot {
+    pub fn new(origin: &[Vec<char>]) -> Snapshot {
         let mut _self = Snapshot {
             board: [[Cell('0', N_ALL); 9]; 9],
         };
@@ -139,11 +139,11 @@ mod tests {
             vec!['3', '7', '5', '.', '.', '6', '8', '9', '.'],
         ];
         solve_sudoku(&mut board);
-        for i in 0..9 {
-            for j in 0..9 {
-                print!("{} ", board[i][j]);
+        for row in board {
+            for cell in row {
+                print!("{} ", cell);
             }
-            println!("");
+            println!();
         }
     }
 }

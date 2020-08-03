@@ -3,8 +3,8 @@ use std::collections::HashMap;
 #[allow(dead_code)]
 fn contains_nearby_duplicate(nums: Vec<i32>, k: i32) -> bool {
     let mut map = HashMap::new();
-    for i in 0..nums.len() {
-        if let Some(old) = map.insert(nums[i], i) {
+    for (i, n) in nums.iter().enumerate() {
+        if let Some(old) = map.insert(n, i) {
             if i - old <= k as usize {
                 return true;
             }

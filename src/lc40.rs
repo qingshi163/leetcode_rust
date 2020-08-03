@@ -15,7 +15,7 @@ fn combination_sum2(candidates: Vec<i32>, target: i32) -> Vec<Vec<i32>> {
 fn helper(
     results: &mut Vec<Vec<i32>>,
     stack: &mut Vec<i32>,
-    candidates: &Vec<i32>,
+    candidates: &[i32],
     start_idx: usize,
     target: i32
 ) {

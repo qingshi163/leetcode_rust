@@ -1,3 +1,6 @@
+#[cfg(test)]
+#[macro_use]
+extern crate approx;
 #[macro_use]
 mod utils;
 mod lc1;
@@ -59,6 +62,7 @@ mod lc234;
 mod lc258;
 mod lc977;
 mod invert_binary_tree;
+mod binary_tree_zigzag;
 
 fn main() {
     println!("Use cargo test to run the code");

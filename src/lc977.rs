@@ -5,12 +5,11 @@ fn sorted_squares(a: Vec<i32>) -> Vec<i32> {
     let mut p = a.binary_search(&0).unwrap_or_else(|x| x);
     while p != 0 && a[p-1] == 0 { p -= 1; }
     let (mut l, mut h) = (p, p);
-    for i in 0..a.len() {
+    for r in &mut result {
         let _h = h;
-        result[i] = {
+        *r = {
             if l == 0 { h+=1; a[_h]*a[_h] }
-            else if h == a.len() { l-=1; a[l]*a[l] }
-            else if -a[l-1] < a[h] { l-=1; a[l]*a[l] }
+            else if h == a.len() || -a[l-1] < a[h] { l-=1; a[l]*a[l] }
             else { h+=1; a[_h]*a[_h] }
         }
     }

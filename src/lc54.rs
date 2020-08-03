@@ -18,6 +18,7 @@ fn helper(matrix: &[Vec<i32>], start_x: usize, start_y: usize, end_x: usize, end
     for x in start_x..end_x {
         output.push(matrix[start_y][x]);
     }
+    #[allow(clippy::needless_range_loop)]
     for y in start_y+1..end_y {
         output.push(matrix[y][end_x-1]);
     }

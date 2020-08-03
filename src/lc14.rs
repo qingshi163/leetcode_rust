@@ -9,11 +9,13 @@ fn longest_common_prefix(strs: Vec<String>) -> String {
     loop {
         let mut iters = iter_vec.iter_mut();
         let curr = iters.next().unwrap().next();
-        if curr.is_some() && iters.all(|it| it.next() == curr) {
-            result.push(curr.unwrap());
-        } else {
-            break;
+        if let Some(c) = curr {
+            if iters.all(|it| it.next() == curr) {
+                result.push(c);
+                continue;
+            }
         }
+        break;
     }
     result
 }

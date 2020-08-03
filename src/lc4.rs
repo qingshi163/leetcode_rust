@@ -1,6 +1,6 @@
 
 
-fn find_median_single(nums: &Vec<i32>, head: usize, tail: usize) -> f64 {
+fn find_median_single(nums: &[i32], head: usize, tail: usize) -> f64 {
     let dif = tail - head;
     let mid = dif / 2;
     
@@ -47,15 +47,15 @@ mod tests {
 
     #[test]
     fn test_4() {
-        assert_eq!(find_median_sorted_arrays(vec![0,4], vec![2,3]), 2.5);
-        assert_eq!(find_median_sorted_arrays(vec![1,2,3,4,5], vec![]), 3.0);
-        assert_eq!(find_median_sorted_arrays(vec![1,2,3], vec![4,5]), 3.0);
-        assert_eq!(find_median_sorted_arrays(vec![1,2], vec![3,4,5]), 3.0);
-        assert_eq!(find_median_sorted_arrays(vec![1,2,3], vec![3,4,5]), 3.0);
-        assert_eq!(find_median_sorted_arrays(vec![1], vec![1]), 1.0);
-        assert_eq!(find_median_sorted_arrays(vec![1], vec![2]), 1.5);
-        assert_eq!(find_median_sorted_arrays(vec![1,5], vec![2]), 2.0);
-        assert_eq!(find_median_sorted_arrays(vec![1,2], vec![3,4]), 2.5);
-        assert_eq!(find_median_sorted_arrays(vec![1,2,2], vec![1,2,3]), 2.0);
+        assert_relative_eq!(find_median_sorted_arrays(vec![0,4], vec![2,3]), 2.5);
+        assert_relative_eq!(find_median_sorted_arrays(vec![1,2,3,4,5], vec![]), 3.0);
+        assert_relative_eq!(find_median_sorted_arrays(vec![1,2,3], vec![4,5]), 3.0);
+        assert_relative_eq!(find_median_sorted_arrays(vec![1,2], vec![3,4,5]), 3.0);
+        assert_relative_eq!(find_median_sorted_arrays(vec![1,2,3], vec![3,4,5]), 3.0);
+        assert_relative_eq!(find_median_sorted_arrays(vec![1], vec![1]), 1.0);
+        assert_relative_eq!(find_median_sorted_arrays(vec![1], vec![2]), 1.5);
+        assert_relative_eq!(find_median_sorted_arrays(vec![1,5], vec![2]), 2.0);
+        assert_relative_eq!(find_median_sorted_arrays(vec![1,2], vec![3,4]), 2.5);
+        assert_relative_eq!(find_median_sorted_arrays(vec![1,2,2], vec![1,2,3]), 2.0);
     }
 }

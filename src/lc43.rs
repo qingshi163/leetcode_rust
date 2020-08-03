@@ -2,8 +2,8 @@
 #[allow(dead_code)]
 fn multiply(num1: String, num2: String) -> String {
     let mut res = vec![0u8; num1.len() + num2.len()];
-    let num1: Vec<u8> = num1.bytes().map(|b| b - '0' as u8).collect();
-    let num2: Vec<u8> = num2.bytes().map(|b| b - '0' as u8).collect();
+    let num1: Vec<u8> = num1.bytes().map(|b| b - b'0').collect();
+    let num2: Vec<u8> = num2.bytes().map(|b| b - b'0').collect();
     for i in (0..num1.len()).rev() {
         let mut carry = 0;
         for j in (0..num2.len()).rev() {
@@ -16,7 +16,7 @@ fn multiply(num1: String, num2: String) -> String {
     match res.iter().position(|&b| b != 0) {
         Some(i) => {
             let res = &mut res[i..];
-            res.iter_mut().for_each(|b| *b += '0' as u8);
+            res.iter_mut().for_each(|b| *b += b'0');
             unsafe {
                 String::from_utf8_unchecked(res.to_vec())
             }

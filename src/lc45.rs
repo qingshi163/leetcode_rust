@@ -11,6 +11,7 @@ fn jump(nums: Vec<i32>) -> i32 {
     let mut count = 1;
     // println!("start: {}, end: {}", start, end);
     while cover < nums.len() - 1 {
+        #[allow(clippy::needless_range_loop)]
         for i in start..end+1 {
             cover = std::cmp::max(cover, i + nums[i] as usize);
         }

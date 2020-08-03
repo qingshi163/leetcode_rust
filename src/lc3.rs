@@ -12,7 +12,7 @@ fn lengthOfLongestSubstring(s: String) -> i32 {
         }
         sub.push(b);
     }
-    return std::cmp::max(count, sub.len() as i32);
+    std::cmp::max(count, sub.len() as i32)
 }
 
 #[cfg(test)]

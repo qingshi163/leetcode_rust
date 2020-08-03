@@ -22,10 +22,8 @@ fn my_atoi(str: String) -> i32 {
         result += c.to_digit(10).unwrap() as i64;
     });
     if negative {
-        if -result >= std::i32::MIN.into() {-result as i32} else {std::i32::MIN.into()}
-    } else {
-        if result <= std::i32::MAX.into() { result as i32 } else {std::i32::MAX.into()}
-    }
+        if -result >= std::i32::MIN.into() {-result as i32} else {std::i32::MIN}
+    } else if result <= std::i32::MAX.into() { result as i32 } else {std::i32::MAX}
 }
 
 #[cfg(test)]

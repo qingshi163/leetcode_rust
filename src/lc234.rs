@@ -7,13 +7,9 @@ fn is_palindrome(head: Option<Box<ListNode>>) -> bool {
     }
     let mut v = Vec::new();
     let mut curr = head;
-    loop {
-        if let Some(node) = curr {
-            v.push(node.val);
-            curr = node.next;
-        } else {
-            break;
-        }
+    while let Some(node) = curr {
+        v.push(node.val);
+        curr = node.next;
     }
     let (mut lo, mut hi) = (0, v.len() - 1);
     while lo < hi - 1 {
