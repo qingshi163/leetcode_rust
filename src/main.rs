@@ -63,6 +63,7 @@ mod lc258;
 mod lc977;
 mod invert_binary_tree;
 mod binary_tree_zigzag;
+mod word_dictionary;
 
 fn main() {
     println!("Use cargo test to run the code");
