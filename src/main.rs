@@ -67,6 +67,7 @@ mod design_hashset;
 mod word_dictionary;
 mod find_duplicate_in_array;
 mod vertical_order_binary_tree;
+mod path_sum_iii;
 
 fn main() {
     println!("Use cargo test to run the code");
