@@ -64,6 +64,9 @@ mod lc977;
 mod invert_binary_tree;
 mod binary_tree_zigzag;
 mod design_hashset;
+mod word_dictionary;
+mod find_duplicate_in_array;
+mod vertical_order_binary_tree;
 
 fn main() {
     println!("Use cargo test to run the code");

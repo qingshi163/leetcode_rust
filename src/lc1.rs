@@ -2,8 +2,8 @@
 use std::collections::HashMap;
 #[allow(dead_code)]
 fn two_sum(nums: Vec<i32>, target: i32) -> Vec<i32> {
-    let mut map = HashMap::new();
-    for (i, num) in nums.iter().enumerate() {
+    let mut map: HashMap<i32, i32> = HashMap::new();
+    for (i, num) in nums.into_iter().enumerate() {
         match map.get(&(target - num)) {
             Some(val) => return vec![*val, i as i32],
             None => { map.insert(num, i as i32); }
