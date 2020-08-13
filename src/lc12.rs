@@ -64,11 +64,11 @@ mod tests {
 
     #[test]
     fn test_12() {
-        assert_eq!(int_to_roman(3), "III".to_owned());
-        assert_eq!(int_to_roman(4), "IV".to_owned());
-        assert_eq!(int_to_roman(9), "IX".to_owned());
-        assert_eq!(int_to_roman(19), "XIX".to_owned());
-        assert_eq!(int_to_roman(58), "LVIII".to_owned());
-        assert_eq!(int_to_roman(1994), "MCMXCIV".to_owned());
+        assert_eq!(int_to_roman(3), "III");
+        assert_eq!(int_to_roman(4), "IV");
+        assert_eq!(int_to_roman(9), "IX");
+        assert_eq!(int_to_roman(19), "XIX");
+        assert_eq!(int_to_roman(58), "LVIII");
+        assert_eq!(int_to_roman(1994), "MCMXCIV");
     }
 }
