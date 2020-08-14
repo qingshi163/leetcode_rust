@@ -74,6 +74,7 @@ mod find_duplicate_in_array;
 mod vertical_order_binary_tree;
 mod path_sum_iii;
 mod iterator_of_combination;
+mod longest_palindrome;
 
 fn main() {
     println!("Use cargo test to run the code");
