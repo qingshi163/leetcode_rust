@@ -31,6 +31,7 @@ mod lc25;
 mod lc26;
 mod lc27;
 mod lc28;
+mod lc30;
 mod lc31;
 mod lc34;
 mod lc37;
