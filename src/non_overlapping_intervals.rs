@@ -62,16 +62,18 @@ mod tests {
         );
         assert_eq!(erase_overlap_intervals(vec![vec![1, 2], vec![2, 3]]), 0);
         assert_eq!(
-            erase_overlap_intervals(vec![
-                vec![0, 2],
-                vec![1, 3],
-                vec![1, 3],
-                vec![2, 4],
-                vec![3, 5],
-                vec![3, 5],
-                vec![4, 6]
+            erase_overlap_intervals(vec2d![
+                [0, 2],
+                [1, 3],
+                [1, 3],
+                [2, 4],
+                [3, 5],
+                [3, 5],
+                [4, 6],
             ]),
             4
         );
+        let test = vec2d![[1,2], [2,3], [3,4]];
+        assert_eq!(erase_overlap_intervals(test), 0);
     }
 }

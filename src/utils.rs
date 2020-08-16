@@ -16,6 +16,16 @@ macro_rules! vec_sort {
         tmp
     }};
 }
+#[macro_export]
+macro_rules! vec2d {
+    ($([$($e:expr),* $(,)*]),* $(,)*) => {
+        vec![
+            $(
+                vec![$($e),*],
+            )*
+        ]
+    }
+}
 
 // Definition for singly-linked list.
 #[derive(PartialEq, Eq, Clone, Debug)]
