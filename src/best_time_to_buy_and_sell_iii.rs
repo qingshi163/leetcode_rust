@@ -44,7 +44,7 @@ fn max_profit(prices: Vec<i32>) -> i32 {
         right[i] = std::cmp::max(right[i + 1], max - prices[i]);
         max = std::cmp::max(max, prices[i]);
     }
-    dbg!(&left, &right);
+    // dbg!(&left, &right);
     left.iter().zip(right.iter()).map(|(a, b)| a + b).max().unwrap()
 }
 
