@@ -80,6 +80,7 @@ mod longest_palindrome;
 mod non_overlapping_intervals;
 mod best_time_to_buy_and_sell_iii;
 mod numbers_with_same_consecutive;
+mod reorder_list;
 
 
 fn main() {
