@@ -37,6 +37,7 @@ mod lc34;
 mod lc37;
 mod lc39;
 mod lc40;
+mod lc41;
 mod lc43;
 mod lc44;
 mod lc45;
