@@ -83,6 +83,7 @@ mod best_time_to_buy_and_sell_iii;
 mod numbers_with_same_consecutive;
 mod reorder_list;
 mod goat_latin;
+mod random_point_non_overlapping_rectangle;
 
 
 fn main() {
