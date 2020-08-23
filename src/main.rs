@@ -69,6 +69,7 @@ mod lc219;
 mod lc234;
 mod lc258;
 mod lc977;
+mod lc1032;
 mod invert_binary_tree;
 mod binary_tree_zigzag;
 mod design_hashset;
@@ -84,7 +85,6 @@ mod numbers_with_same_consecutive;
 mod reorder_list;
 mod goat_latin;
 mod random_point_non_overlapping_rectangle;
-
 
 fn main() {
     println!("Use cargo test to run the code");
