@@ -46,6 +46,7 @@ mod lc49;
 mod lc53;
 mod lc54;
 mod lc58;
+mod lc59;
 mod lc66;
 mod lc67;
 mod lc88;
