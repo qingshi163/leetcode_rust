@@ -85,6 +85,7 @@ mod numbers_with_same_consecutive;
 mod reorder_list;
 mod goat_latin;
 mod random_point_non_overlapping_rectangle;
+mod sum_of_left_leaves;
 
 fn main() {
     println!("Use cargo test to run the code");
