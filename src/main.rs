@@ -37,6 +37,7 @@ mod lc34;
 mod lc37;
 mod lc39;
 mod lc40;
+mod lc41;
 mod lc42;
 mod lc43;
 mod lc44;
@@ -46,6 +47,7 @@ mod lc49;
 mod lc53;
 mod lc54;
 mod lc58;
+mod lc59;
 mod lc66;
 mod lc67;
 mod lc88;
@@ -69,6 +71,7 @@ mod lc219;
 mod lc234;
 mod lc258;
 mod lc977;
+mod lc1032;
 mod invert_binary_tree;
 mod binary_tree_zigzag;
 mod design_hashset;
@@ -81,8 +84,10 @@ mod longest_palindrome;
 mod non_overlapping_intervals;
 mod best_time_to_buy_and_sell_iii;
 mod numbers_with_same_consecutive;
+mod reorder_list;
 mod goat_latin;
-
+mod random_point_non_overlapping_rectangle;
+mod sum_of_left_leaves;
 
 fn main() {
     println!("Use cargo test to run the code");
