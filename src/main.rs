@@ -70,6 +70,7 @@ mod lc217;
 mod lc219;
 mod lc234;
 mod lc258;
+mod lc436;
 mod lc977;
 mod lc983;
 mod lc1032;
