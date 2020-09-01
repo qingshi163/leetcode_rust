@@ -71,6 +71,7 @@ mod lc219;
 mod lc234;
 mod lc258;
 mod lc412;
+mod lc436;
 mod lc949;
 mod lc977;
 mod lc983;
